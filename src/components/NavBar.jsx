@@ -4,30 +4,27 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 
 const NavBar = () => {
   return (
-    <Navbar bg="primary" className="text-light" expand="lg">
+    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
     <Container>
-        <Navbar.Brand href="/">High Jump Docs</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar.Brand href="/">High Jump Instructions</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
         </Nav>
-        </Navbar.Collapse>
+        <Nav>
+        <Nav.Link href="/">Home</Nav.Link>
+        <NavDropdown title="Quik View" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">By Location</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">By LP</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">By Item</NavDropdown.Item>
+        </NavDropdown>
+        <NavDropdown title="Inventory " id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">By Location</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">By LP</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Increment Item</NavDropdown.Item>
+        </NavDropdown>
+        </Nav>
+    </Navbar.Collapse>
     </Container>
     </Navbar>
   )
